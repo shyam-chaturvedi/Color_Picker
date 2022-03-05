@@ -1,0 +1,100 @@
+body{
+    background-color: gray;
+    margin: 0;
+}
+.ColorsInRGB{
+     background-color: yellow;
+     display: flex;
+    flex-direction: vertical ;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.4rem;
+}
+
+
+.Buttons{
+    background-color : white ;
+    color: red;
+    font-size: 1.3rem;
+    display: flex; 
+    flex-direction: row;
+}
+.NewGame:hover ,.EasyMode:hover ,.HardMode:hover {
+    background-color: lightskyblue;
+}
+.NewGame{
+    margin-left:20rem ;
+
+    cursor: pointer;
+}
+.EasyMode{
+    margin-left: 20rem;
+    cursor: pointer;
+}
+.HardMode{
+    margin-left: 5rem;
+    cursor: pointer;
+}
+.FirstRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 5rem ;
+}
+.SecondRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 3rem ;
+}
+.Box1{
+    width:8rem;
+    height:8rem ;
+    background-color: gray;
+    border-radius: 1rem;
+}
+.Box2{
+    width:8rem;
+    height:8rem ;
+    background-color: gray;
+    margin-left: 3rem;
+    border-radius: 1rem;
+}
+
+.Box3{
+    width:8rem;
+    height:8rem ;
+    background-color: gray;
+    margin-left: 3rem;
+    border-radius: 1rem;
+}
+.Box4{
+    width:8rem;
+    height:8rem ;
+    background-color: gray;
+    border-radius: 1rem;
+}
+.Box5{
+    width:8rem;
+    height:8rem ;
+    background-color: gray;
+    margin-left: 3rem;
+    border-radius: 1rem;
+}
+.Box6{
+    width:8rem;
+    height:8rem ;
+    background-color: gray;
+    margin-left: 3rem;
+    border-radius: 1rem;
+}
+.score{
+    margin-left: 16rem;
+    color: gray;
+}
+.mode{
+    background-color: green;
+    width : 4rem ;
+   
+}
