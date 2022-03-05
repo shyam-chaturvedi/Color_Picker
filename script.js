@@ -16,7 +16,7 @@ let box = [];
  box[4] = document.querySelector('.Box5');
  box[5] = document.querySelector('.Box6');
 
-
+let hasWin = false ; 
  let colorOfBox = [];  // array of obj {x,y,z} 
  let answerIndex ; 
  let Mode = 3 ; // for easy =3 ,, for hard = 6 
@@ -49,7 +49,8 @@ let box = [];
   function changeState(){
     header.style.backgroundColor = "yellow" ;
     NewGameButton.innerHTML = "New Colors" ;
-    Score.innerHTML=""
+    Score.innerHTML="" ;
+    hasWin = false ;
     colorOfBox= [];
     setColors(Mode) ;
     answerIndex = Math.floor(Math.random()*Mode) ;
@@ -59,18 +60,20 @@ let box = [];
   for(let i=0;i<6;i++){
     box[i].addEventListener('click',function(e){
       e.preventDefault() ;
-
-      if(answerIndex===i){
-        for(let j=0;j<Mode;j++){
-          box[j].style.backgroundColor = box[i].style.backgroundColor ;
+     if(!hasWin){
+        if(answerIndex===i){
+          for(let j=0;j<Mode;j++){
+            box[j].style.backgroundColor = box[i].style.backgroundColor ;
+          }
+          header.style.backgroundColor =  box[i].style.backgroundColor ;
+          NewGameButton.innerHTML = "Play Again!";
+          Score.innerHTML = "Correct";
+          hasWin = true ;
+        }else{
+          box[i].style.backgroundColor = BGcolor ;
+          Score.innerHTML = "Try Again" ;
         }
-        header.style.backgroundColor =  box[i].style.backgroundColor ;
-        NewGameButton.innerHTML = "Play Agin!";
-        Score.innerHTML = "Correct";
-      }else{
-        box[i].style.backgroundColor = BGcolor ;
-        Score.innerHTML = "Try Again" ;
-      }
+     }
     })
   }
 
